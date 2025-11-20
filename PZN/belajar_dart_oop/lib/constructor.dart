@@ -5,6 +5,11 @@ class Person{
   String? address;
   final String country = "Indonesia";
 
+  Person(String paramName, String paramAddress){
+    name = paramName;
+    address = paramAddress;
+  }
+
   // method
   void sayHello(String paramName){
     print("Hello $paramName, My name is $name");
@@ -20,22 +25,17 @@ class Person{
 }
 
 void main(){
-  var person1 = Person();
+  var person1 = Person("Nama","Kota");
+  print(person1.name);
+  print(person1.address);
+  print(person1.country);
+  print('-----------');
 
   person1.name = "Deny Febriyanto";
-  person1.address = "Jember"; //tidak boleh null
-  //person1.country = "Amerika"; error sudah final tidak bisa dirubah
+  person1.address = "Summarecon";
 
   print(person1.name);
   print(person1.address);
   print(person1.country);
-  person1.sayHello('Komaruddin');
-  person1.hello();
-  print(person1.getName());
-  print('---------');
-
-  Person person2 = Person();
-  print(person2);
-
 
 }

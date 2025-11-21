@@ -1,4 +1,4 @@
-import 'package:belajar_dart_oop/belajar_dart_oop.dart';
+import '../bin/belajar_dart_oop.dart';
 import 'package:test/test.dart';
 
 void main() {

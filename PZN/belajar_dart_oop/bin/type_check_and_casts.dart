@@ -12,7 +12,15 @@ class VicePresident extends Manager {
 }
 
 void sayHello(Employee employee){
-  print('Hello ${employee.name}');
+  if(employee is VicePresident){
+    VicePresident vicePresident = employee as VicePresident;
+    print('Hello ${vicePresident.name} as VP');
+  }else if(employee is Manager){
+    Manager manager = employee as Manager;
+    print('Hello ${manager.name} as Manager');
+  }else{
+    print('Hello ${employee.name} as Employee');
+  }
 }
 
 void main(){
